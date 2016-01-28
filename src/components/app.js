@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 
+import Prompt from '../containers/prompt';
+
 export default () => {
   return (
-    <h1>
-      Hello there
-    </h1>
+    <div>
+      <h1>
+        Hello there
+      </h1>
+      <Prompt />
+    </div>
   );
 }

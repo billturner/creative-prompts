@@ -1,7 +1,11 @@
 import { combineReducers } from 'redux';
 
+import subjectsReducer from './subjects';
+import techniquesReducer from './techniques';
+
 const rootReducer = combineReducers({
-  state: (state = {}) => state
+  subjects: subjectsReducer,
+  techniques: techniquesReducer
 });
 
 export default rootReducer;
