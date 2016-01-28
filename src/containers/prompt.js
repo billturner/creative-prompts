@@ -6,8 +6,8 @@ import { generateNewPrompt } from '../actions/general';
 
 class Prompt extends Component {
   currentPrompt() {
-    const newSubject = this.props.currentSubject;
-    const newTechnique = this.props.currentTechnique;
+    const newSubject = this.props.currentSubject,
+          newTechnique = this.props.currentTechnique;
 
     return (
       <div>

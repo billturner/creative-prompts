@@ -9,8 +9,11 @@
 
 ### todo
 
- * keep track of last 5
- * don't repeat one from last 5
  * use immutable.js
- * figure out building for distribution
  * get scss working
+ * figure out building for dist
+ * TEST setup
+ * disable logger for dist
+ * cross-env?
+ * how to read/use ENV vars for keys and such
+ * localStorage?
