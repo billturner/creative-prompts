@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import _ from 'lodash';
 
 import { generateNewPrompt } from '../actions/general';
 
@@ -8,19 +9,15 @@ class Prompt extends Component {
     const newSubject = this.props.currentSubject;
     const newTechnique = this.props.currentTechnique;
 
-    if (!newSubject && !newTechnique) {
-      return <div>Click button below</div>;
-    }
-
     return (
       <div>
         <div>
-          <strong>Subject:</strong>
-          { newSubject.name }
+          <h5>Subject:</h5>
+          { _.isEmpty(newSubject) ? '-' : newSubject.name }
         </div>
         <div>
-          <strong>Technique:</strong>
-          { newTechnique.name }
+          <h5>Technique:</h5>
+          { _.isEmpty(newTechnique) ? '-' : newTechnique.name }
         </div>
       </div>
     );
@@ -28,11 +25,11 @@ class Prompt extends Component {
 
   render() {
     return (
-      <div>
+      <div className="prompt-display">
         { this.currentPrompt() }
         <button
           onClick={ this.props.generateNewPrompt.bind(this) }
-          className="btn btn-primary">
+          className="btn btn-primary btn-regenerate">
           Generate Prompt
         </button>
       </div>

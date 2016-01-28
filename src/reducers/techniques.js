@@ -5,7 +5,8 @@ import {
 
 const INITIAL_STATE = {
   all: initialTechniques,
-  current: ''
+  current: {},
+  previous: {}
 };
 
 export default function (state = INITIAL_STATE, action) {

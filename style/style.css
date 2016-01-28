@@ -1,1 +1,13 @@
 /* stylesheet */
+.prompt-display {
+  text-align: center;
+}
+
+.prompt-display h5 {
+  text-transform: uppercase;
+  color: grey;
+}
+
+.prompt-display .btn-regenerate {
+  margin-top: 20px;
+}

@@ -7,7 +7,8 @@ import {
 
 const INITIAL_STATE = {
   all: initialSubjects,
-  current: ''
+  current: {},
+  previous: {}
 };
 
 export default function (state = INITIAL_STATE, action) {
