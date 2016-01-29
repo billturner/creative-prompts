@@ -3,17 +3,16 @@
 * React
 * Redux
 * ES6/ES2015
-* Sass
+* Scss
 * Bootstrap
 * Webpack
 
 ### todo
 
- * use immutable.js
- * get scss working
- * figure out building for dist
  * TEST setup
+ * figure out building for dist
  * disable logger for dist
  * cross-env?
+ * use immutable.js
  * how to read/use ENV vars for keys and such
  * localStorage?
