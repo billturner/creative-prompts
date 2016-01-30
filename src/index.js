@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import createLogger from 'redux-logger';
 
+require('file?name=[name].[ext]!../index.html');
 import './app.scss';
 
 import App from './components/app';

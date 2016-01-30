@@ -8,7 +8,8 @@
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "lint": "node ./node_modules/eslint/bin/eslint.js ./src",
     "test": "mocha --compilers js:babel-register --require ./test/setup.js test/**/*.spec.js --recursive",
-    "test:watch": "npm test -- --watch"
+    "test:watch": "npm test -- --watch",
+    "build": "NODE_ENV=production ./node_modules/.bin/webpack -p --progress"
   },
   "author": "Bill Turner",
   "license": "MIT",
@@ -34,6 +35,7 @@
     "eslint": "^1.10.3",
     "eslint-plugin-react": "^3.16.1",
     "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
     "mocha": "^2.4.5",
     "node-sass": "^3.4.2",
     "react-addons-test-utils": "^0.14.7",

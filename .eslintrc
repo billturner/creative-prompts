@@ -184,7 +184,9 @@
   "extends": "eslint:recommended",
   "env": {
     "es6": true,
-    "browser": true
+    "browser": true,
+    "amd": true,
+    "mocha": true
   },
   "plugins": [
     "react"

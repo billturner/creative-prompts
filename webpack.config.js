@@ -6,7 +6,7 @@ module.exports = {
     './src/index.js'
   ],
   output: {
-    path: __dirname,
+    path: './dist',
     publicPath: '/',
     filename: 'bundle.js'
   },
@@ -29,7 +29,12 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin('bundle.css'),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    })
   ],
   devServer: {
     port: 8181,
