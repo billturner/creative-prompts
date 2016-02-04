@@ -1,8 +1,8 @@
-import React from 'react';
-import TestUtils from 'react-addons-test-utils';
 import jsdom from 'jsdom';
-import { expect } from 'chai';
-import sinon from 'sinon';
+// import React from 'react';
+// import TestUtils from 'react-addons-test-utils';
+// import { expect } from 'chai';
+// import sinon from 'sinon';
 
 const document = jsdom.jsdom('<!doctype html><html><body></body></html>');
 const window = document.defaultView;
@@ -18,7 +18,7 @@ function propagateToGlobal(window) {
 }
 propagateToGlobal(window);
 
-global.expect = expect;
-global.sinon = sinon;
-global.React = React;
-global.TestUtils = TestUtils;
+// global.expect = expect;
+// global.sinon = sinon;
+// global.React = React;
+// global.TestUtils = TestUtils;

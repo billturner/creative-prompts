@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "lint": "node ./node_modules/eslint/bin/eslint.js ./src",
-    "test": "mocha --compilers js:babel-register --require ./test/setup.js test/**/*.spec.js --recursive",
+    "test": "mocha --compilers js:babel-register --require ./test/setup.js --recursive",
     "test:watch": "npm test -- --watch",
     "build": "NODE_ENV=production ./node_modules/.bin/webpack -p --progress"
   },
@@ -18,8 +18,8 @@
     "lodash": "^4.0.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
-    "react-redux": "^4.1.1",
-    "redux": "^3.1.2",
+    "react-redux": "^4.2.0",
+    "redux": "^3.2.0",
     "redux-logger": "^2.4.0"
   },
   "devDependencies": {

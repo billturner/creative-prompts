@@ -4,7 +4,7 @@ import _ from 'lodash';
 
 import { generateNewPrompt } from '../actions/general';
 
-class Prompt extends Component {
+export class Prompt extends Component {
   currentPrompt() {
     const newSubject = this.props.currentSubject,
           newTechnique = this.props.currentTechnique;
