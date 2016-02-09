@@ -4,7 +4,7 @@ import _ from 'lodash';
 
 import { generateNewPrompt } from '../actions/general';
 
-export class Prompt extends Component {
+export class Randomizer extends Component {
   currentPrompt() {
     const newSubject = this.props.currentSubject,
           newTechnique = this.props.currentTechnique;
@@ -44,4 +44,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { generateNewPrompt })(Prompt);
+export default connect(mapStateToProps, { generateNewPrompt })(Randomizer);

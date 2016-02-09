@@ -1,13 +1,12 @@
 import React from 'react';
 
 import Header from './header';
-import Prompt from '../containers/prompt';
 
-export default () => {
+export default (props) => {
   return (
     <div>
-      <Header />
-      <Prompt />
+      <Header { ...props.history } />
+      { props.children }
     </div>
   );
 };

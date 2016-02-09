@@ -7,7 +7,7 @@ import createLogger from 'redux-logger';
 require('file?name=[name].[ext]!../index.html');
 import './app.scss';
 
-import App from './components/app';
+import routes from './routes';
 import reducers from './reducers/index';
 
 const logger = createLogger(),
@@ -20,7 +20,7 @@ const logger = createLogger(),
 
 ReactDOM.render(
   <Provider store={ store }>
-    <App />
+    { routes }
   </Provider>,
   document.querySelector('.container')
 );

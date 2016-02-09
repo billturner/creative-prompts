@@ -7,7 +7,7 @@ import {
   scryRenderedDOMComponentsWithTag
 } from 'react-addons-test-utils';
 
-import { Prompt } from '../../src/containers/prompt';
+import { Randomizer } from '../../src/containers/randomizer';
 
 function setup() {
   const props = {
@@ -27,7 +27,7 @@ function setup() {
   const renderer = createRenderer();
 
   renderer.render(
-    <Prompt {...props} />
+    <Randomizer {...props} />
   );
 
   let output = renderer.getRenderOutput();
@@ -39,7 +39,7 @@ function setup() {
   }
 }
 
-describe('Containers: prompt', () => {
+describe('Containers: randomizer', () => {
   describe('rendering', () => {
     it('renders', () => {
       const { output } = setup();
