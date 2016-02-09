@@ -12,6 +12,7 @@
  * TEST
    * container
    * components
+ * split the prompts into separate component?
  * Routing
    * integrate react-router-redux
    * start initial list chooser

@@ -1,11 +1,13 @@
 import { combineReducers } from 'redux';
+import { routeReducer } from 'react-router-redux';
 
 import subjectsReducer from './subjects';
 import techniquesReducer from './techniques';
 
-const rootReducer = combineReducers({
+const reducers = combineReducers({
   subjects: subjectsReducer,
-  techniques: techniquesReducer
+  techniques: techniquesReducer,
+  routing: routeReducer
 });
 
-export default rootReducer;
+export default reducers;
