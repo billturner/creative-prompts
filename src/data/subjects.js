@@ -1,114 +1,147 @@
 export default [
   {
-    id: '',
+    id: 1,
+    listId: 1,
     name: 'hand(s)'
   },
   {
-    id: '',
-    name: 'bottle'
+    id: 2,
+    listId: 1,
+    name: 'bottle, or something made with glass'
   },
   {
-    id: '',
+    id: 3,
+    listId: 1,
     name: 'cat'
   },
   {
-    id: '',
+    id: 4,
+    listId: 1,
     name: 'person'
   },
   {
-    id: '',
+    id: 5,
+    listId: 1,
     name: 'selfie'
   },
   {
-    id: '',
+    id: 6,
+    listId: 1,
     name: 'car'
   },
   {
-    id: '',
+    id: 7,
+    listId: 1,
     name: 'building'
   },
   {
-    id: '',
+    id: 8,
+    listId: 1,
     name: 'fruit or veg'
   },
   {
-    id: '',
+    id: 9,
+    listId: 1,
     name: 'plant'
   },
   {
-    id: '',
+    id: 10,
+    listId: 1,
     name: 'bird'
   },
   {
-    id: '',
+    id: 11,
+    listId: 1,
     name: 'tree'
   },
   {
-    id: '',
+    id: 12,
+    listId: 1,
     name: 'model from catalog'
   },
   {
-    id: '',
+    id: 13,
+    listId: 1,
     name: 'kitchen implement'
   },
   {
-    id: '',
+    id: 14,
+    listId: 1,
     name: 'tea cup or coffee mug'
   },
   {
-    id: '',
+    id: 15,
+    listId: 1,
     name: 'chair'
   },
   {
-    id: '',
+    id: 16,
+    listId: 1,
     name: 'tchotchke'
   },
   {
-    id: '',
+    id: 17,
+    listId: 1,
     name: 'lamp or light'
   },
   {
-    id: '',
+    id: 18,
+    listId: 1,
     name: 'food package'
   },
   {
-    id: '',
+    id: 19,
+    listId: 1,
     name: 'shoe(s)'
   },
   {
-    id: '',
+    id: 20,
+    listId: 1,
     name: 'flower(s)'
   },
   {
-    id: '',
+    id: 21,
+    listId: 1,
     name: 'some kind of landscape'
   },
   {
-    id: '',
+    id: 22,
+    listId: 1,
     name: 'building(s)'
   },
   {
-    id: '',
+    id: 23,
+    listId: 1,
     name: 'clouds'
   },
   {
-    id: '',
+    id: 24,
+    listId: 1,
     name: 'bird(s)'
   },
   {
-    id: '',
+    id: 25,
+    listId: 1,
     name: 'bicycle/motorcycle/moped'
   },
   {
-    id: '',
+    id: 26,
+    listId: 1,
     name: 'boxes'
   },
   {
-    id: '',
+    id: 27,
+    listId: 1,
     name: 'a stack of something (books, etc)'
   },
   {
-    id: '',
+    id: 28,
+    listId: 1,
     name: 'some detail in your house/apartment'
+  },
+  {
+    id: 29,
+    listId: 1,
+    name: 'a photograph, video still frame, or magazine cover or advertisement'
   }
 ];

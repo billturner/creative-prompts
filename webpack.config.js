@@ -29,6 +29,7 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin('bundle.css'),
+    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
