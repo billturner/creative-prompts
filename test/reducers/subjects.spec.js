@@ -28,27 +28,27 @@ describe('Reducers: subjects', () => {
         action
       );
 
-      expect(nextState.current).to.not.be.empty;
+      expect(nextState.current).to.not.be.empty();
     });
 
     it('adds the current subject to the previous array', () => {
       const nextState = subjectsReducer(
-        initialState,
-        action
-      );
-      const currentSubject = nextState.current;
+              initialState,
+              action
+            ),
+            currentSubject = nextState.current;
 
       expect(nextState.previous).to.include(currentSubject);
     });
 
     it('keeps only 5 subjects in previous array', () => {
-      let nextState = subjectsReducer(initialState, action); // 1
-      nextState = subjectsReducer(nextState, action); // 2
-      nextState = subjectsReducer(nextState, action); // 3
-      nextState = subjectsReducer(nextState, action); // 4
-      nextState = subjectsReducer(nextState, action); // 5
-      nextState = subjectsReducer(nextState, action); // 6
-      nextState = subjectsReducer(nextState, action); // 7
+      let nextState = subjectsReducer(initialState, action);
+      nextState = subjectsReducer(nextState, action);
+      nextState = subjectsReducer(nextState, action);
+      nextState = subjectsReducer(nextState, action);
+      nextState = subjectsReducer(nextState, action);
+      nextState = subjectsReducer(nextState, action);
+      nextState = subjectsReducer(nextState, action);
 
       expect(nextState.previous.length).to.equal(5);
     });

@@ -14,13 +14,12 @@
    * components
  * split the prompts into separate component?
  * Routing
-   * integrate react-router-redux
    * start initial list chooser
+ * add something to change head>title - react-helmet?
  * move scss files into separate directory
    * add our own \_variables.scss - copy the stock one
  * disable logger for dist
  * build static pages
-   * about
    * credits
- * use immutable.js
+ * use immutable.js (or maybe seamless-immutable)
  * localStorage?

@@ -6,7 +6,7 @@
   "repository": "git@github.com:billturner/creative-prompts.git",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "lint": "node ./node_modules/eslint/bin/eslint.js ./src",
+    "lint": "node ./node_modules/eslint/bin/eslint.js ./src ./test",
     "test": "mocha --compilers js:babel-register --require ./test/setup.js --recursive",
     "test:watch": "npm test -- --watch",
     "build": "NODE_ENV=production ./node_modules/.bin/webpack -p --progress"
@@ -36,6 +36,7 @@
     "babel-register": "^6.4.3",
     "chai": "^3.5.0",
     "css-loader": "^0.23.1",
+    "dirty-chai": "^1.2.2",
     "eslint": "^1.10.3",
     "eslint-plugin-react": "^3.16.1",
     "extract-text-webpack-plugin": "^1.0.1",

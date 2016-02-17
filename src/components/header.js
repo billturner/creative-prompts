@@ -12,8 +12,10 @@ export default (history) => {
             className="navbar-brand">Sketching Prompts</Link>
         </div>
         <ul className="nav navbar-nav">
-          <li>
-            <a href="#">Lists</a>
+          <li className={ history.isActive('/lists') ? 'active' : '' }>
+            <Link
+              title="Choose a list of prompts to work off of"
+              to="/lists">Lists</Link>
           </li>
           <li className={ history.isActive('/randomizer') ? 'active' : '' }>
             <Link

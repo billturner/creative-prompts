@@ -1,8 +1,7 @@
 import jsdom from 'jsdom';
-// import React from 'react';
-// import TestUtils from 'react-addons-test-utils';
-// import { expect } from 'chai';
-// import sinon from 'sinon';
+import chai from 'chai';
+import dirty from 'dirty-chai';
+chai.use(dirty);
 
 const document = jsdom.jsdom('<!doctype html><html><body></body></html>');
 const window = document.defaultView;

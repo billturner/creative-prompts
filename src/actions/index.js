@@ -1,1 +1,2 @@
 export const GENERATE_NEW_PROMPT = 'GENERATE_NEW_PROMPT';
+export const CHOOSE_LIST = 'CHOOSE_LIST';
