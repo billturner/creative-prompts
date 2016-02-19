@@ -9,12 +9,16 @@
 
 ### todo
 
+ * rename subjects to list-items?
+ * for randomizer, just use its subjects
+ * figure out state shape for list-items/current list/current list items
+ * have separate reducer (or just state objects) for randomizer and list chooser?
+ * load only some subjects into state?
  * TEST
    * container
    * components
  * split the prompts into separate component?
  * Routing
-   * start initial list chooser
  * add something to change head>title - react-helmet?
  * move scss files into separate directory
    * add our own \_variables.scss - copy the stock one

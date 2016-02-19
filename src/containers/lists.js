@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import _ from 'lodash';
 
 import { chooseList } from '../actions/lists';
 
@@ -13,11 +14,21 @@ class Lists extends Component {
     });
   }
 
+  chooseList() {
+    const chosenId = _.toInteger(this.refs.listChooser.value);
+    if (chosenId === -1) { return; }
+    console.log(`I chose list number ${chosenId}`);
+  }
+
   render() {
     return (
       <div>
         <h3>Lists</h3>
-        <select name="bob" ref="listChooser" className="col-xs-8 form-control">
+        <select
+          onChange={ this.chooseList.bind(this) }
+          name="listChooser"
+          ref="listChooser"
+          className="col-xs-8 form-control">
           <option value="-1"></option>
           { this.buildOptions() }
         </select>

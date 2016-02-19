@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
 
+// import HeaderLinks from './header-links';
+
 export default (history) => {
   return (
     <nav className="navbar navbar-default">
@@ -12,27 +14,15 @@ export default (history) => {
             className="navbar-brand">Sketching Prompts</Link>
         </div>
         <ul className="nav navbar-nav">
-          <li className={ history.isActive('/lists') ? 'active' : '' }>
-            <Link
-              title="Choose a list of prompts to work off of"
-              to="/lists">Lists</Link>
-          </li>
           <li className={ history.isActive('/randomizer') ? 'active' : '' }>
             <Link
               title="Generate a random prompt with subject and technique"
               to="/randomizer">Randomizer!</Link>
           </li>
-        </ul>
-        <ul className="nav navbar-nav navbar-right">
-          <li className={ history.isActive('/about') ? 'active' : '' }>
+          <li className={ history.isActive('/lists') ? 'active' : '' }>
             <Link
-              title="Find out about this site"
-              to="/about">About</Link>
-          </li>
-          <li className={ history.isActive('/contact') ? 'active' : '' }>
-            <Link
-              title="Contact the creator of this site"
-              to="/contact">Contact</Link>
+              title="Choose a list of prompts to work off of"
+              to="/lists">Lists</Link>
           </li>
         </ul>
       </div>
