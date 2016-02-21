@@ -3,6 +3,7 @@ import { expect } from 'chai';
 import {
   CHOOSE_LIST
 } from '../../src/actions/index';
+
 import * as actions from '../../src/actions/lists';
 
 describe('Actions: chooseList', () => {

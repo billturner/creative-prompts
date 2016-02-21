@@ -6,7 +6,7 @@ import { Router, browserHistory } from 'react-router';
 import { syncHistory } from 'react-router-redux';
 import createLogger from 'redux-logger';
 
-require('file?name=[name].[ext]!../index.html');
+import 'file?name=[name].[ext]!../index.html';
 import './app.scss';
 
 import routes from './routes';
@@ -21,7 +21,6 @@ const loggerMiddleware = createLogger(),
           loggerMiddleware
         )
       );
-
 routerMiddleware.listenForReplays(store);
 
 ReactDOM.render(

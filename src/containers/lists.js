@@ -17,7 +17,6 @@ class Lists extends Component {
   chooseList() {
     const chosenId = _.toInteger(this.refs.listChooser.value);
     if (chosenId === -1) { return; }
-    console.log(`I chose list number ${chosenId}`);
   }
 
   render() {

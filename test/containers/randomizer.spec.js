@@ -10,15 +10,9 @@ import { Randomizer } from '../../src/containers/randomizer';
 function setup() {
   let output;
   const props = {
-          subjects: {
-            current: {
-              name: 'Test subject'
-            }
-          },
-          techniques: {
-            current: {
-              name: 'Test technique'
-            }
+          randomizer: {
+            currentSubject: { name: 'Test' },
+            currentTechnique: { name: 'Cool' }
           },
           generateNewPrompt: sinon.spy()
         },

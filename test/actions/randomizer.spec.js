@@ -3,9 +3,9 @@ import { expect } from 'chai';
 import {
   GENERATE_NEW_PROMPT
 } from '../../src/actions/index';
-import * as actions from '../../src/actions/general';
+import * as actions from '../../src/actions/randomizer';
 
-describe('Actions: general', () => {
+describe('Actions: randomizer', () => {
   it('should create an action for generating prompts', () => {
     const actual = actions.generateNewPrompt(),
           expected = {

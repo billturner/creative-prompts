@@ -1,13 +1,11 @@
 import { combineReducers } from 'redux';
 import { routeReducer } from 'react-router-redux';
 
-import subjectsReducer from './subjects';
-import techniquesReducer from './techniques';
+import randomizerReducer from './randomizer';
 import listsReducer from './lists';
 
 const reducers = combineReducers({
-  subjects: subjectsReducer,
-  techniques: techniquesReducer,
+  randomizer: randomizerReducer,
   lists: listsReducer,
   routing: routeReducer
 });

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 
-import { generateNewPrompt } from '../actions/general';
+import { generateNewPrompt } from '../actions/randomizer';
 
 export class Randomizer extends Component {
   currentPrompt() {
@@ -39,8 +39,8 @@ export class Randomizer extends Component {
 
 function mapStateToProps(state) {
   return {
-    currentSubject: state.subjects.current,
-    currentTechnique: state.techniques.current
+    currentSubject: state.randomizer.currentSubject,
+    currentTechnique: state.randomizer.currentTechnique
   };
 }
 
