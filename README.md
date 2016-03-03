@@ -9,13 +9,15 @@
 
 ### todo
 
- * TEST
-   * container
-   * components
+ * configure nginx to allow deeplinking
+   * http://readystate4.com/2012/05/17/nginx-and-apache-rewrite-to-support-html5-pushstate/
+   * http://stackoverflow.com/questions/27291885/nginx-rewriting-pushstate-static-resources-wont-load
  * clean up layout for phone
+   * use lg-8 or whatever for big browsers, and xs-12 for phone
  * use enzyme & expect libraries instead of chai?
    * because of expectJSX
    * https://github.com/jontewks/redux/commit/04d6345adac95ce8415c3bd0bee439f2c5aa7239
+   * remove jsdom?
  * pull all list-items into a const? same with techniques?
    * make a constants.js file to hold these AND the actions?
  * split the prompts into separate component?
@@ -27,8 +29,3 @@
    * credits
  * use immutable.js (or maybe seamless-immutable)
  * localStorage?
- * figure out CommonChunksPlugin
-   * current file sizes
-     -rw-r--r--  1 bturner  staff   89212 Mar  3 10:38 bundle.css
-     -rw-r--r--  1 bturner  staff  298562 Mar  3 10:38 bundle.js
-     -rw-r--r--  1 bturner  staff     425 Mar  3 10:38 index.html
