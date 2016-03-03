@@ -12,6 +12,8 @@
  * TEST
    * container
    * components
+ * use enzyme & expect libraries instead of chai?
+   * because of expectJSX
  * pull all list-items into a const? same with techniques?
    * make a constants.js file to hold these AND the actions?
  * split the prompts into separate component?

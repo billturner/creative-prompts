@@ -2,35 +2,56 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 
-import { chooseList } from '../actions/lists';
+import {
+  chooseList,
+  clearList
+} from '../actions/lists';
+
+import ListDisplay from '../components/list-display';
 
 class Lists extends Component {
   buildOptions() {
     return this.props.lists.map(opt => {
       return (
         <option
+          selected={
+            _.isEmpty(this.props.currentList) ?
+              false :
+              this.props.currentList.id === opt.id
+          }
           value={ opt.id }>{ opt.name }</option>
       );
     });
   }
 
-  chooseList() {
+  onSelect() {
     const chosenId = _.toInteger(this.refs.listChooser.value);
-    if (chosenId === -1) { return; }
+    if (chosenId === -1) {
+      this.props.clearList();
+    } else {
+      this.props.chooseList(chosenId);
+    }
   }
 
   render() {
     return (
-      <div>
+      <div className="col-xs-8">
         <h3>Lists</h3>
-        <select
-          onChange={ this.chooseList.bind(this) }
-          name="listChooser"
-          ref="listChooser"
-          className="col-xs-8 form-control">
-          <option value="-1"></option>
-          { this.buildOptions() }
-        </select>
+        <div className="form-group">
+          <select
+            onChange={ this.onSelect.bind(this) }
+            name="listChooser"
+            ref="listChooser"
+            className="form-control">
+            <option value="-1"></option>
+            { this.buildOptions() }
+          </select>
+        </div>
+        <div className="clearfix">
+          <ListDisplay
+            currentList={ this.props.currentList }
+            currentListItems={ this.props.currentListItems } />
+        </div>
       </div>
     );
   }
@@ -39,7 +60,8 @@ class Lists extends Component {
 function mapStateToProps(state) {
   return {
     lists: state.lists.all,
-    currentList: state.lists.current
+    currentList: state.lists.current,
+    currentListItems: state.lists.currentItems
   };
 }
-export default connect(mapStateToProps, { chooseList })(Lists);
+export default connect(mapStateToProps, { chooseList, clearList })(Lists);

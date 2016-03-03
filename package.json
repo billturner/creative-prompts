@@ -6,7 +6,7 @@
   "repository": "git@github.com:billturner/creative-prompts.git",
   "scripts": {
     "clean": "rimraf dist/*",
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "start:dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "lint": "node ./node_modules/eslint/bin/eslint.js ./src ./test",
     "test": "mocha --compilers js:babel-register --require ./test/setup.js --recursive",
     "test:watch": "npm test -- --watch",
