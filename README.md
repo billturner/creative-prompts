@@ -12,8 +12,6 @@
  * configure nginx to allow deeplinking
    * http://readystate4.com/2012/05/17/nginx-and-apache-rewrite-to-support-html5-pushstate/
    * http://stackoverflow.com/questions/27291885/nginx-rewriting-pushstate-static-resources-wont-load
- * clean up layout for phone
-   * use lg-8 or whatever for big browsers, and xs-12 for phone
  * use enzyme & expect libraries instead of chai?
    * because of expectJSX
    * https://github.com/jontewks/redux/commit/04d6345adac95ce8415c3bd0bee439f2c5aa7239

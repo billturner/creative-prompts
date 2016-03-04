@@ -156,7 +156,7 @@
     // strict mode
     "strict": [2, "global"],
 
-    "react/no-multi-comp": 2,
+    "react/no-multi-comp": [2, { "ignoreStateless": true }],
     "react/wrap-multilines": 1,
     "react/jsx-uses-react": 1,
 

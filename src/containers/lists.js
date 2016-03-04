@@ -35,7 +35,7 @@ class Lists extends Component {
 
   render() {
     return (
-      <div className="col-xs-8">
+      <div className="col-md-12">
         <h3>Lists</h3>
         <div className="form-group">
           <select
@@ -47,7 +47,7 @@ class Lists extends Component {
             { this.buildOptions() }
           </select>
         </div>
-        <div className="clearfix">
+        <div>
           <ListDisplay
             currentList={ this.props.currentList }
             currentListItems={ this.props.currentListItems } />

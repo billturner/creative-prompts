@@ -41,9 +41,9 @@ module.exports = {
     new ExtractTextPlugin('bundle.css'),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-      comments: false
-    }),
+    // new webpack.optimize.UglifyJsPlugin({
+    //   comments: false
+    // }),
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': JSON.stringify('production')

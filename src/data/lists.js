@@ -2,7 +2,7 @@ export default [
   {
     id: 1,
     name: 'Everyday Matters Challenges',
-    description: 'more information here',
+    description: 'A list of drawing challenged from Danny Gregory\'s book "Everyday Matters" along with contributions from the EDM community',
     url: 'http://dannygregorysblog.com/community/edm-challenges/',
     credits: 'Danny Gregory, Karen Winters, and the EDM community'
   },
@@ -18,6 +18,6 @@ export default [
     name: 'Randomizer! Subject List',
     description: 'The list of subjects used in this site\'s Randomizer! prompt generator',
     url: '',
-    credits: 'Bill Turner and Dana Jones, with help from all the many lists of creative prompts in the world'
+    credits: ''
   }
 ];

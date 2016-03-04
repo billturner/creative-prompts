@@ -6,7 +6,7 @@
   "repository": "git@github.com:billturner/creative-prompts.git",
   "scripts": {
     "clean": "rimraf dist/*",
-    "start:dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "start:dev": "NODE_ENV=development node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "lint": "node ./node_modules/eslint/bin/eslint.js ./src ./test",
     "test": "mocha --compilers js:babel-register --require ./test/setup.js --recursive",
     "test:watch": "npm test -- --watch",
@@ -41,6 +41,7 @@
     "eslint-plugin-react": "^3.16.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
+    "jsdom": "^8.1.0",
     "mocha": "^2.4.5",
     "node-sass": "^3.4.2",
     "react-addons-test-utils": "^0.14.7",
