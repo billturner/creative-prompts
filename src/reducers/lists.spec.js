@@ -1,11 +1,11 @@
-import { expect } from 'chai';
+import expect from 'expect';
 
-import listsReducer from '../../src/reducers/lists';
-import initialLists from '../../src/data/lists';
+import listsReducer from './lists';
+import initialLists from '../data/lists';
 import {
   CHOOSE_LIST,
   CLEAR_LIST
-} from '../../src/actions/index';
+} from '../actions/index';
 
 describe('Reducers: lists', () => {
   const initialState = {
@@ -23,7 +23,7 @@ describe('Reducers: lists', () => {
         };
 
   it('returns the initial state', () => {
-    expect(listsReducer(undefined, {})).to.deep.equal(initialState);
+    expect(listsReducer(undefined, {})).toEqual(initialState);
   });
 
   describe('CLEAR_LIST', () => {
@@ -36,8 +36,8 @@ describe('Reducers: lists', () => {
               action
             );
 
-      expect(nextState.current).to.be.empty();
-      expect(nextState.currentItems).to.be.empty();
+      expect(nextState.current).toEqual({});
+      expect(nextState.currentItems).toEqual([]);
     });
   });
 
@@ -52,8 +52,8 @@ describe('Reducers: lists', () => {
               action
             );
 
-      expect(nextState.current).to.not.be.empty();
-      expect(nextState.current.id).to.equal(action.id);
+      expect(nextState.current).toExist();
+      expect(nextState.current.id).toEqual(action.id);
     });
 
     it('fetches list items that belong to correct list', () => {
@@ -66,9 +66,9 @@ describe('Reducers: lists', () => {
               action
             );
 
-      expect(nextState.currentItems).to.not.be.empty();
-      expect(nextState.currentItems.length).to.equal(100);
-      expect(nextState.currentItems[0].listId).to.equal(2);
+      expect(nextState.currentItems).toExist();
+      expect(nextState.currentItems.length).toEqual(100);
+      expect(nextState.currentItems[0].listId).toEqual(2);
     });
   });
 });

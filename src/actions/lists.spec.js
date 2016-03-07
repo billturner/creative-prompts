@@ -1,13 +1,13 @@
-import { expect } from 'chai';
+import expect from 'expect';
 
 import {
   CHOOSE_LIST,
   CLEAR_LIST
-} from '../../src/actions/index';
+} from './index';
 
-import * as actions from '../../src/actions/lists';
+import * as actions from './lists';
 
-describe('Actions', () => {
+describe('Actions: lists', () => {
   describe('chooseList', () => {
     it('creates an action for choosing lists', () => {
       const actual = actions.chooseList(1),
@@ -16,7 +16,7 @@ describe('Actions', () => {
               id: 1
             };
 
-      expect(actual).to.deep.equal(expected);
+      expect(actual).toEqual(expected);
     });
   });
 
@@ -27,7 +27,7 @@ describe('Actions', () => {
               type: CLEAR_LIST
             };
 
-      expect(actual).to.deep.equal(expected);
+      expect(actual).toEqual(expected);
     });
   });
 });

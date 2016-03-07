@@ -8,7 +8,7 @@
     "clean": "rimraf dist/*",
     "start:dev": "NODE_ENV=development node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "lint": "node ./node_modules/eslint/bin/eslint.js ./src ./test",
-    "test": "mocha --compilers js:babel-register --require ./test/setup.js --recursive",
+    "test": "./node_modules/.bin/mocha --compilers js:babel-register --recursive src/**/*.spec.js",
     "test:watch": "npm test -- --watch",
     "build": "NODE_ENV=production ./node_modules/.bin/webpack -p --progress"
   },
@@ -33,21 +33,21 @@
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-1": "^6.3.13",
+    "babel-preset-stage-2": "^6.5.0",
     "babel-register": "^6.4.3",
-    "chai": "^3.5.0",
     "css-loader": "^0.23.1",
-    "dirty-chai": "^1.2.2",
+    "enzyme": "^2.0.0",
     "eslint": "^1.10.3",
     "eslint-plugin-react": "^3.16.1",
+    "expect": "^1.14.0",
+    "expect-jsx": "^2.3.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
-    "jsdom": "^8.1.0",
     "mocha": "^2.4.5",
     "node-sass": "^3.4.2",
     "react-addons-test-utils": "^0.14.7",
     "rimraf": "^2.5.2",
     "sass-loader": "^3.1.2",
-    "sinon": "^1.17.3",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.12",
     "webpack-dev-server": "^1.14.1"
@@ -56,7 +56,7 @@
     "presets": [
       "react",
       "es2015",
-      "stage-1"
+      "stage-2"
     ]
   }
 }

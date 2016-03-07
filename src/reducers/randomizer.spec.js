@@ -1,9 +1,9 @@
-import { expect } from 'chai';
+import expect from 'expect';
 
-import randomizerReducer from '../../src/reducers/randomizer';
+import randomizerReducer from './randomizer';
 import {
   GENERATE_NEW_PROMPT
-} from '../../src/actions/index';
+} from '../actions/index';
 
 describe('Reducers: randomizer', () => {
   const initialState = {
@@ -14,7 +14,7 @@ describe('Reducers: randomizer', () => {
   };
 
   it('returns the initial state', () => {
-    expect(randomizerReducer(undefined, {})).to.deep.equal(initialState);
+    expect(randomizerReducer(undefined, {})).toEqual(initialState);
   });
 
   describe('GENERATE_NEW_PROMPT', () => {
@@ -28,7 +28,7 @@ describe('Reducers: randomizer', () => {
         action
       );
 
-      expect(nextState.currentSubject).to.not.be.empty();
+      expect(nextState.currentSubject).toExist();
     });
 
     it('adds the current subject to the previous array', () => {
@@ -38,7 +38,7 @@ describe('Reducers: randomizer', () => {
             ),
             currentSubject = nextState.currentSubject;
 
-      expect(nextState.previousSubjects).to.include(currentSubject);
+      expect(nextState.previousSubjects).toInclude(currentSubject);
     });
 
     it('sets the current technique', () => {
@@ -47,7 +47,7 @@ describe('Reducers: randomizer', () => {
         action
       );
 
-      expect(nextState.currentTechnique).to.not.be.empty();
+      expect(nextState.currentTechnique).toExist();
     });
 
     it('adds the current technique to the previous array', () => {
@@ -57,7 +57,7 @@ describe('Reducers: randomizer', () => {
             ),
             currentTechnique = nextState.currentTechnique;
 
-      expect(nextState.previousTechniques).to.include(currentTechnique);
+      expect(nextState.previousTechniques).toInclude(currentTechnique);
     });
 
     it('keeps only 5 subjects in previous array', () => {
@@ -69,8 +69,8 @@ describe('Reducers: randomizer', () => {
       nextState = randomizerReducer(nextState, action);
       nextState = randomizerReducer(nextState, action);
 
-      expect(nextState.previousSubjects.length).to.equal(5);
-      expect(nextState.previousTechniques.length).to.equal(5);
+      expect(nextState.previousSubjects.length).toEqual(5);
+      expect(nextState.previousTechniques.length).toEqual(5);
     });
   });
 });

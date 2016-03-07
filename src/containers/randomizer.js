@@ -1,23 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import _ from 'lodash';
 
 import { generateNewPrompt } from '../actions/randomizer';
+import RandomizerItem from '../components/randomizer-item';
 
 export class Randomizer extends Component {
   currentPrompt() {
-    const newSubject = this.props.currentSubject,
-          newTechnique = this.props.currentTechnique;
-
     return (
       <div>
         <div>
           <h5>Subject:</h5>
-          { _.isEmpty(newSubject) ? '-' : newSubject.name }
+          <RandomizerItem {...this.props.currentSubject} />
         </div>
         <div>
           <h5>Technique:</h5>
-          { _.isEmpty(newTechnique) ? '-' : newTechnique.name }
+          <RandomizerItem {...this.props.currentTechnique} />
         </div>
       </div>
     );

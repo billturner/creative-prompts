@@ -2,6 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 
 import ListItem from './list-item';
+import ListFooter from './list-footer';
 
 export default (props) => {
   if (_.isEmpty(props.currentList)) {
@@ -12,26 +13,6 @@ export default (props) => {
         </div>
       </div>
     );
-  }
-
-  function buildFooter() {
-    if (_.isEmpty(props.currentList.credits)) { return ''; }
-
-    return (
-      <div className="panel-footer">
-        <strong>Credits:</strong>
-        { ' ' }
-        { props.currentList.credits }
-        { ' ' }
-        (<a href={ props.currentList.url }>link</a>)
-      </div>
-    );
-  }
-
-  function buildItems(items) {
-    return props.currentListItems.map(item => {
-      return <ListItem name={ item.name } key={ item.id } />;
-    });
   }
 
   return (
@@ -46,10 +27,14 @@ export default (props) => {
           { props.currentList.description }
         </p>
         <ul className="list-group">
-          { buildItems(props.currentListItems) }
+          {
+            props.currentListItems.map(
+              item => <ListItem name={ item.name } key={ item.id } />
+            )
+          }
         </ul>
       </div>
-      { buildFooter(props.currentList) }
+      <ListFooter {...props.currentList} />
     </div>
   );
 };

@@ -1,9 +1,9 @@
-import { expect } from 'chai';
+import expect from 'expect';
 
 import {
   GENERATE_NEW_PROMPT
-} from '../../src/actions/index';
-import * as actions from '../../src/actions/randomizer';
+} from './index';
+import * as actions from './randomizer';
 
 describe('Actions: randomizer', () => {
   it('should create an action for generating prompts', () => {
@@ -12,6 +12,6 @@ describe('Actions: randomizer', () => {
             type: GENERATE_NEW_PROMPT
           };
 
-    expect(actual).to.deep.equal(expected);
+    expect(actual).toEqual(expected);
   });
 });
