@@ -9,7 +9,6 @@ module.exports = {
       'react-dom',
       'react-redux',
       'react-router',
-      'react-router-redux',
       'lodash',
       'redux'
     ]

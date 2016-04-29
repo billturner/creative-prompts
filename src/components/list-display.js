@@ -29,7 +29,11 @@ export default (props) => {
         <ul className="list-group">
           {
             props.currentListItems.map(
-              item => <ListItem name={ item.name } key={ item.id } />
+              item => <ListItem
+                        showPosition={ props.currentList.showPosition }
+                        name={ item.name }
+                        pos={ item.pos }
+                        key={ item.id } />
             )
           }
         </ul>
