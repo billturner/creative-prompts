@@ -15,8 +15,9 @@ export default (
     <IndexRoute component={ Randomizer } />
     <Route path="randomizer" component={ Randomizer } />
     <Route path="lists" component={ Lists } />
+    <Route path="lists/:id" component={ Lists } />
     <Route path="about" component={ About } />
     <Route path="contact" component={ Contact } />
-    <Route path="*" component={ NotFound }/>
+    <Route path="*" component={ NotFound } />
   </Route>
 );

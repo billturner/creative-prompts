@@ -28,8 +28,10 @@ class Lists extends Component {
     const chosenId = _.toInteger(this.refs.listChooser.value);
     if (chosenId === -1) {
       this.props.clearList();
+      this.props.history.push(`/lists`);
     } else {
       this.props.chooseList(chosenId);
+      this.props.history.push(`/lists/${chosenId}`);
     }
   }
 
