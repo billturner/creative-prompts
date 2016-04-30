@@ -16,7 +16,7 @@ module.exports = {
   output: {
     path: './dist',
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: 'assets/bundle.js'
   },
   module: {
     loaders: [
@@ -36,8 +36,8 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js'),
-    new ExtractTextPlugin('bundle.css'),
+    new webpack.optimize.CommonsChunkPlugin('vendor', 'assets/vendor.js'),
+    new ExtractTextPlugin('assets/bundle.css'),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
     // new webpack.optimize.UglifyJsPlugin({

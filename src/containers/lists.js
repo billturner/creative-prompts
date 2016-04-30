@@ -10,6 +10,13 @@ import {
 import ListDisplay from '../components/list-display';
 
 class Lists extends Component {
+  constructor(props) {
+    super(props);
+    if (_.isEmpty(this.props.currentList) && this.props.params.id) {
+      this.props.chooseList(_.toInteger(this.props.params.id));
+    }
+  }
+
   buildOptions() {
     return this.props.lists.map(opt => {
       return (
