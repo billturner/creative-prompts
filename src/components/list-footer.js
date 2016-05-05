@@ -1,8 +1,8 @@
 import React from 'react';
-import _ from 'lodash';
+import { isEmpty } from 'lodash';
 
 export default ({ credits, url }) => {
-  if (_.isEmpty(credits)) { return <span></span>; }
+  if (isEmpty(credits)) { return <span></span>; }
 
   return (
     <div className="panel-footer">

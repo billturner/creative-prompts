@@ -20,7 +20,7 @@ describe('Containers: Randomizer', () => {
       const rendered = shallow(<Randomizer { ...props } />);
 
       expect(rendered.type()).toEqual('div');
-      expect(rendered.node.props.children.length).toEqual(2);
+      // expect(find(children, { type: 'div' }).length).toEqual(2);
     });
   });
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
-import _ from 'lodash';
+import { isEmpty, toInteger } from 'lodash';
 
 import {
   chooseList,
@@ -12,8 +13,8 @@ import ListDisplay from '../components/list-display';
 class Lists extends Component {
   constructor(props) {
     super(props);
-    if (_.isEmpty(this.props.currentList) && this.props.params.id) {
-      this.props.chooseList(_.toInteger(this.props.params.id));
+    if (isEmpty(this.props.currentList) && this.props.params.id) {
+      this.props.chooseList(toInteger(this.props.params.id));
     }
   }
 
@@ -22,7 +23,7 @@ class Lists extends Component {
       return (
         <option
           selected={
-            _.isEmpty(this.props.currentList) ?
+            isEmpty(this.props.currentList) ?
               false :
               this.props.currentList.id === opt.id
           }
@@ -32,7 +33,7 @@ class Lists extends Component {
   }
 
   onSelect() {
-    const chosenId = _.toInteger(this.refs.listChooser.value);
+    const chosenId = toInteger(this.refs.listChooser.value);
     if (chosenId === -1) {
       this.props.clearList();
       this.props.history.push(`/lists`);
@@ -45,6 +46,8 @@ class Lists extends Component {
   render() {
     return (
       <div className="col-md-12">
+        <Helmet
+          title="Lists" />
         <h3>Lists</h3>
         <div className="form-group">
           <select

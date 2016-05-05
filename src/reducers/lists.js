@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import { filter, find } from 'lodash';
 
 import initialLists from '../data/lists';
 import listItems from '../data/list-items';
@@ -15,7 +15,7 @@ const INITIAL_STATE = {
 };
 
 function getListItems(id) {
-  return _.filter(listItems, { listId: id });
+  return filter(listItems, { listId: id });
 }
 
 export default function (state = INITIAL_STATE, action) {
@@ -23,7 +23,7 @@ export default function (state = INITIAL_STATE, action) {
     case CHOOSE_LIST:
       return {
         ...state,
-        current: _.find(state.all, { id: action.id }),
+        current: find(state.all, { id: action.id }),
         currentItems: getListItems(action.id)
       };
     case CLEAR_LIST:

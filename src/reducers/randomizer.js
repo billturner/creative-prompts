@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import { filter, indexOf, sample } from 'lodash';
 
 import {
   GENERATE_NEW_PROMPT
@@ -13,23 +13,23 @@ const INITIAL_STATE = {
         previousSubjects: [],
         previousTechniques: []
       },
-      allSubjects = _.filter(rawSubjects, { listId: 99 });
+      allSubjects = filter(rawSubjects, { listId: 99 });
 
 function nextCleanSubject(previous) {
-  let cleanSubject = _.sample(allSubjects);
+  let cleanSubject = sample(allSubjects);
 
-  while (_.indexOf(previous, cleanSubject) !== -1) {
-    cleanSubject = _.sample(allSubjects);
+  while (indexOf(previous, cleanSubject) !== -1) {
+    cleanSubject = sample(allSubjects);
   }
 
   return cleanSubject;
 }
 
 function nextCleanTechnique(previous) {
-  let cleanTechnique = _.sample(allTechniques);
+  let cleanTechnique = sample(allTechniques);
 
-  while (_.indexOf(previous, cleanTechnique) !== -1) {
-    cleanTechnique = _.sample(allTechniques);
+  while (indexOf(previous, cleanTechnique) !== -1) {
+    cleanTechnique = sample(allTechniques);
   }
 
   return cleanTechnique;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
 
 import { generateNewPrompt } from '../actions/randomizer';
@@ -23,6 +24,8 @@ export class Randomizer extends Component {
   render() {
     return (
       <div className="prompt-display">
+        <Helmet
+          title="Randomizer" />
         { this.currentPrompt() }
         <button
           onClick={ this.props.generateNewPrompt.bind(this) }

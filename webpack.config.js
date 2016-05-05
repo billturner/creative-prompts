@@ -9,14 +9,13 @@ module.exports = {
       'react-dom',
       'react-redux',
       'react-router',
-      'lodash',
       'redux'
     ]
   },
   output: {
     path: './dist',
     publicPath: '/',
-    filename: 'assets/bundle.js'
+    filename: 'assets/js/bundle.js'
   },
   module: {
     loaders: [
@@ -36,8 +35,8 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin('vendor', 'assets/vendor.js'),
-    new ExtractTextPlugin('assets/bundle.css'),
+    new webpack.optimize.CommonsChunkPlugin('vendor', 'assets/js/vendor.js'),
+    new ExtractTextPlugin('assets/css/bundle.css'),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
     // new webpack.optimize.UglifyJsPlugin({

@@ -1,11 +1,12 @@
 import React from 'react';
-import _ from 'lodash';
+import Helmet from 'react-helmet';
+import { isEmpty } from 'lodash';
 
 import ListItem from './list-item';
 import ListFooter from './list-footer';
 
 export default (props) => {
-  if (_.isEmpty(props.currentList)) {
+  if (isEmpty(props.currentList)) {
     return (
       <div className="panel panel-default">
         <div className="panel-body">
@@ -17,6 +18,8 @@ export default (props) => {
 
   return (
     <div className="panel panel-default">
+      <Helmet
+        title={ `${props.currentList.name} / Lists` } />
       <div className="panel-heading">
         <div className="panel-title">
           { props.currentList.name }
